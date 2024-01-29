@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Resturant</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        function fun(){
+            var mob_nav = document.querySelector(".navbar");
+            mob_nav.classList.toggle("active");
+        }
+    </script>
+    <style>
+
+        
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@300;700&display=swap');
+        *{
+    padding:0;
+    margin:0;
+    box-sizing:border;
+    
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+/*nav*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 9rem;
+    height: 9%;
+}
+.left h1{
+    font-size: 2.9rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: black;
+}
+.list li a{
+    /* display: inline-block; */
+    text-decoration: none;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    color: black;
+    font-weight: 200;
+    transition: all 0.3s;
+}
+.list li{
+    list-style: none;
+    cursor: pointer;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    gap: 3.5rem;
+
+}
+.list li a:hover{
+    color: rgb(22, 7, 36);
+    
+} 
+
+
+
+.right{
+    display: flex;
+    /* align-items: center; */
+}
+.menu{
+    width: 3rem;
+    height: 3rem;
+    color: black;
+}
+
+.mobile{
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+.menu[name="close"]{
+    display: none;
+}
+.navbar{
+    position: relative;
+}
+
+@media(max-width: 62em){
+    .right{
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(188, 135, 135);
+        color: rgb(247, 247, 247);
+        justify-content: center;
+        display: flex;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        transform: translateX(100%);
+        transition: all 1s linear;
+        align-items: center;
+    }
+
+    .mobile{
+        display: block;
+        z-index: 999;
+    }
+
+    .list{
+        align-items: center;
+        flex-direction: column;
+    }
+    .active .right{
+        transform: translateX(0%);
+    }
+    .active .menu[name="close"]{
+        display: block;
+    }
+    .active .menu[name="menu"]{
+        display: none;
+    }
+    
+}
+@media(max-width:94em){
+    .navbar{
+        padding: 1.6rem 7rem;
+    }
+    .list{
+        gap: 3rem;
+    }
+}
+@media(max-width:41em){
+    .navbar{
+        padding: 1.6rem 3rem;
+    }
+}
+@media(max-width:25em) {
+    .navbar {
+        padding: 1.6rem 1.4rem;
+    }
+}  */
+
+/* Home page */
+
+.banner{
+    width:100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+
+.content{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    
+
+
+
+}
+ /*
+nav{
+
+display: flex;
+width: 97%;
+background: white;
+
+justify-content: space-between;
+text-align: center;
+align-items: center;
+padding: 11px 30px;
+ }
+
+
+    nav ol{
+display: flex;
+list-style: none;
+margin-left: 38vh;
+ }
+
+ nav ol li{
+margin-left: 0 22px;
+}
+nav ol li a{
+    margin: 0 22px;
+
+ }
+
+nav ol li a{
+
+color: black;
+font-size: 20px;
+text-decoration: none;
+text-transform: capitalize;
+Letter-spacing: 2px;
+padding: 5px 10px;
+transition: all 0.3s;
+}
+
+nav ol li i{
+    margin-right: 1vh;
+}
+ nav ol li :hover a
+ {
+
+background: #fff;
+
+color: #0a5071;
+
+}
+
+
+
+
+/* Glass Effect */
+
+
+.box{
+    top: 200px;
+    left: 80px;
+
+position:relative;
+
+width:48%;
+
+height:34%;
+
+background: transparent;
+
+border:1px ;
+
+}
+
+.box:before{
+
+content: '';
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:rgba(174, 38, 70, 0.5);
+
+z-index:-1;
+}
+
+.box h1{
+    color: white;
+    line-height: 100px;
+    margin-left: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    font-size: 300%;
+}
+.box p{
+    font-size: 20px;
+    color: white;
+    margin-left: 40px;
+}
+
+
+
+
+
+
+
+
+
+#blog1{
+
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 50px; 
+
+background: linear-gradient(to right,#f578d3,#dbd53d);
+ }
+
+.blog-heading{
+
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+color: white;
+margin-bottom: 1px;
+margin-top: 80px;
+ }
+ .blog-heading h11{
+
+font-size: 2.4rem;
+font-family: Arial, Helvetica, sans-serif;
+letter-spacing: 2px;
+
+color: white;
+font-weight:bold;
+    
+}
+
+ .blog-container{
+display: flex;
+justify-content: center;
+align-items: center;
+
+margin: 20px 0px;
+flex-wrap:wrap;
+
+
+ }
+
+ .blog-box{
+
+width:250px;
+height: 350px;
+border: 1px solid #d3d3d3;
+background-color: #ffffff;
+padding: 30px 10px;
+align-items: center;
+    text-align: center;
+border-top-right-radius:60px;
+
+border-bottom-left-radius:60px;
+padding:2px 2px;
+    transition: all 0.7s ease 0s;
+    cursor: pointer;
+
+    
+
+margin: 60px;
+
+}
+
+.blog-img{
+
+
+
+height: 60%;
+width: 100%;
+padding: 10px;
+    margin-bottom: 15px;
+    
+ }
+
+ .blog-img img{
+width: 100%;
+
+height: 100%;
+padding: 10px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    
+border-top-right-radius:60px;
+}
+
+.blog-box h4{
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+    
+}
+
+.blog-box p{
+    color: black;
+    margin-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 4px;
+    letter-spacing: 0px;
+}
+
+.text1 h6{
+    font-size: 40px;
+    font-weight: 650;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    line-height: 2;
+    text-align: center;
+}
+
+
+
+.order{
+    margin-top: 1px;
+    
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+
+
+.button{
+
+    
+    margin-top:1vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 40px;
+    color: black;
+    /* background-color:rgb(164, 44, 44); */
+    background: linear-gradient(135deg, rgb(163, 163, 163), #f4e4e4);
+    
+backdrop-filter: blur (10px); -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: ease 0.30s;
+}
+
+.button:hover{
+    transform: scale(1.1);
+    color: white;
+    background-color: black;
+    /* border: 2px solid rgb(42, 37, 68); */
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.4);
+    padding: 10px 30px;
+}
+@media(max-width:94em){
+    .box{
+        
+    }
+    .box{
+        
+    }
+}
+@media(max-width:41em){
+    .box{
+        height: 60%;
+        font-size: 15px;
+        padding: 1.6rem 1.4rem;
+    }
+    h1{
+        font-size: 1rem;
+        line-height: 0.2rem;
+    }
+}
+@media(max-width:25em) {
+    .box {
+        height: 60%;
+        font-size: 15px;
+    }
+    h1{
+        font-size: 1rem;
+        line-height: 0.2rem;
+
+    }
+}
+
+
+
+</style>
+</head>
+<body> 
+
+
+    
+    <!-- Header -->
+
+    <div class="content" id="home"> 
+        <nav class="navbar">
+            
+            <div class="right">
+                <ul class="list">
+                    <li class="active"><a href="#">Home</a></li>
+				
+                <li ><a href="#">About Us</a></li>
+                <li ><a href="#">Order</a></li>
+                <li ><a href="#">Contact Us</a></li>
+             
+            </div>
+				
+
+                <div class="icons">
+                   
+                    <img src="instagram-icon.png" height="50px" width="50px" style="float:left;padding: 10px;"; margin-right=1%> 
+                    <img src="fb-icon.png" height="50px" width="50px" style="float:left;padding: 10px;"; margin-right=1%>
+                    <img src="twitter-icon.png" height="50px" width="50px" style="float:left;padding: 10px;"; margin-right=1%>
+                    
+                    
+
+                </div>
+
+			</ul>   
+            
+            <div class="mobile" onclick="fun()">
+                <ion-icon name="menu" class="menu"></ion-icon>
+                <ion-icon name="close" class="menu"></ion-icon>
+            </div>
+        
+        </nav>  --
+ <!----       <nav class="navbar">
+            <div class="left">
+                <h1>navbar</h1>
+            </div>
+            <div class="right">
+                <ul class="list">
+                <li><a href="#">home</a></li>
+                <li><a href="#">gallary</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="https://www.instagram.com/neeku06dz/">contact us</a></li>
+                </ul>
+            </div>
+            <div class="mobile" onclick="fun()">
+                <ion-icon name="menu" class="menu"></ion-icon>
+                <ion-icon name="close" class="menu"></ion-icon>
+            </div>
+        </nav>   --->
+        
+ 
+        <div class="box">
+            <h1>LOREM IPSUM</h1>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                 when an unknown printer took a galley of type and scrambled it to make 
+                 a type specimen book.</p>
+            
+        </div>
+    </div>
+    <div class="banner">
+        <img src="img1.jpg" type="image"></img>
+    </div>
+
+
+    <section id="blog1">
+<hr/>
+        <div class="blog-heading">
+            
+            <h11>Order Now</h11></div>
+            
+                <div class="blog-container">
+                
+                <div class="blog-box">
+                
+                <div class="blog-img">
+                    <img src="img4.jpg" alt="Blog">
+            
+                </div>
+                
+                <!--text--->
+                
+                <h4>BURGER</h4>
+                <p>Lorem Ipsum has been the industry's standard dummy text</p>        
+                
+                </div>     
+                
+                    <div class="blog-box">
+                    
+                    <div class="blog-img">
+                        <img src="img2.jpg" alt="Blog">
+                
+                    </div>
+                    
+                    <!--text--->
+                    
+                    <h4>PIZZA</h4>
+                    <p> Lorem Ipsum has been the industry's standard dummy text</p>
+                    
+                     
+
+                    
+                    </div>
+                    
+                
+        
+                    <div class="blog-box">
+                    
+                        <div class="blog-img">
+                            <img src="img3.jpg" alt="Blog">
+                    
+                        </div>
+                        
+                        <!--text--->
+                        
+                        <h4>PASTA</h4>
+                <p>Lorem Ipsum has been the industry's standard dummy text</p>
+                                  
+                       </div> <br>
+
+                        </div>
+                        <div class="order">
+                            <a href="order" class="button">Order</a>
+                            </div>
+        </section>     
+
+
+    </body>
+
+    
+
+</html>
